@@ -1,28 +1,12 @@
-<?php
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
-<html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-</head>
+<html lang="en">
+  <?= $this->element('head') ?>
 <body>
-
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
+  <?= $this->element('header') ?>
+  <?= $this->Flash->render() ?>
+  <div>
+      <?= $this->fetch('content') ?>
+  </div>
+  <?= $this->element('footer') ?>
 </body>
 </html>
