@@ -14,6 +14,21 @@
           </ul>
         </div>
       </div>
+      <div class="row">
+
+        <?php if($loggedIn) : ?>
+          <div class="col-sm-8 top-loggedin hidden-xs">
+            <p>Привет, одмэн</p>
+          </div>
+          <div class="col-sm-4 top-loggedin">
+            <ul>
+              <li><a href="/admin/main">В админ панель</a></li>
+              <li><a href="/admin/admin/logout">Выйти из аккаунта</a></li>
+            </ul>
+          </div>
+        <?php else :   ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
   <div id="logo-bar">

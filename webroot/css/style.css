@@ -149,6 +149,27 @@ a:focus{
 .top-info li:hover a.my-rss         {background:#EF8D1F;}
 .top-info li:hover a.my-google      {background:#E73904;}
 
+
+.top-loggedin ul{ list-style: none; float: right; padding:0; margin: 0;}
+
+.top-loggedin span { font: 13px/28px "open sans",Helvetica, Arial, sans-serif; padding-right: 15px;
+}
+
+.top-loggedin span i { font-size: 13px; margin-right: 5px; }
+
+.top-loggedin li{ float:left;}
+
+.top-loggedin li a{
+    color: #9f9f9f;
+    font-size: 14px;
+    height: 25px;
+    line-height: 23px;
+    margin: 0 2px;
+    text-align: center;
+    transition: background-color 400ms linear 0s;
+    width: 25px;
+
+}
 /* Logo
 ====================================*/
 

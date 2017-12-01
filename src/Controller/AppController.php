@@ -19,7 +19,8 @@ class AppController extends Controller
                    'controller' => 'admin',
                    'prefix' => 'admin',
                    'action' => 'login'],
-           			'loginRedirect' => ['controller' => 'admin',
+           			'loginRedirect' => ['controller' => 'main',
+                'prefix' => 'admin',
                  'action' => 'index'],
            			'logoutRedirect' => '/',
            			'authenticate' => [
@@ -28,14 +29,34 @@ class AppController extends Controller
            						'username' => 'Login',
            						'password' => 'Password'
            					],
-           					'userModel' => 'User'
+           					'userModel' => 'Users'
            				]
            			],
            			'storage' => [
            				'className' => 'Session',
-           				'key' => 'Auth.User',
+           				'key' => 'Auth.Users',
            			]
            		]);
+    }
+    public function beforeFilter(Event $event)
+        {
+
+          if($this->Auth->user()){
+            $this->set('loggedIn',true);
+          }else{
+            $this->set('loggedIn',false);
+          }
+          //show in prefix admin - admin layout and check access to admin panel
+          if ($this->request->getParam('prefix') == 'admin') {
+            if($this->Auth->user()){
+              $this->viewBuilder()->layout('admin');
+              $authUser = $this->Auth->user();
+
+            }
+          } else {
+          	$this->viewBuilder()->layout('default');
+          }
+
     }
 
     public function beforeRender(Event $event)

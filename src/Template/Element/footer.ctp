@@ -83,6 +83,7 @@
 
 <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/retina-1.1.0.min.js"></script>
 <script type="text/javascript" src="/js/jquery.cookie.js"></script> <!-- jQuery cookie -->
 <script src="/js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>

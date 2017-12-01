@@ -17,6 +17,7 @@
   <?= $this->fetch('script') ?>
 
   <!-- CSS FILES -->
+  <?= $this->Html->css('message.css') ?>
   <?= $this->Html->css('bootstrap.min.css') ?>
   <?= $this->Html->css('style.css') ?>
   <?= $this->Html->css('fractionslider.css') ?>
