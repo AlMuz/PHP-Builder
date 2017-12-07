@@ -37,17 +37,17 @@
                 <div class="col-lg-4 ">
                   <label>Ваше имя: (обязательно)</label>
                   <br>
-                  <input type="text" id="name" name="name" class="form-control" required maxlength="100" data-msg-required="Пожалуйста введите своё имя." value="" placeholder="" >
+                  <input type="text" id="Name" name="Name" class="form-control" maxlength="50" oninvalid="this.setCustomValidity('Пожалуйста введите своё имя.')" oninput="setCustomValidity('')" placeholder="" required>
                 </div>
                 <div class="col-lg-4 ">
                   <label>Ваш Email: (обязательно)</label>
                   <br>
-                  <input type="email" id="email" name="email" class="form-control" required maxlength="100" data-msg-email="Пожалуйста введите правельный email адрес." data-msg-required="Пожалйста введите ваш Email адрес." value="" placeholder="" >
+                  <input type="email" id="Email" name="Email" class="form-control" maxlength="255" oninvalid="this.setCustomValidity('Пожалуйста введите правильный email адрес.')" oninput="setCustomValidity('')" value="" placeholder="" required>
                 </div>
                 <div class="col-md-4">
                   <label>Телефон:</label>
                   <br>
-                  <input type="text" id="subject" name="subject" class="form-control" maxlength="100" data-msg-required="Пожалуйста введите ваш номер телефона." value="" placeholder="">
+                  <input type="text" id="Telephone" name="Telephone" class="form-control" pattern=".{8,8}" required title="Телефон должен состоять из 8 цифр" maxlength="8"  oninvalid="this.setCustomValidity('Пожалуйста введите ваш номер телефона.')" oninput="setCustomValidity(''); this.value=this.value.replace(/[^0-9]/g,'');" value="" placeholder="" required>
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@
                 <div class="col-md-12">
                   <label>Ваше сообщение: (обязательно)</label>
                   <br>
-                  <textarea id="message" class="form-control" name="message" required rows="10" cols="50" data-msg-required="Пожалуйста введите ваше сообщение." maxlength="5000" placeholder=""></textarea>
+                  <textarea id="Text" class="form-control" name="Text" rows="10" cols="50" data-msg-required="Пожалуйста введите ваше сообщение." maxlength="5000" placeholder="" required></textarea>
                 </div>
               </div>
             </div>

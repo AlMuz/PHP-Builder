@@ -14,16 +14,16 @@ class AdminController extends AppController
       $user = $this->Auth->identify();
       if ($user) {
         $this->Auth->setUser($user);
-        $this->Flash->success(__('You successfuly logged in'));
+        $this->Flash->success(__('Вы успешно вошли в аккаунтю'));
         return $this->redirect($this->Auth->redirectUrl());
       }
-      $this->Flash->error(__('Invalid username or password, try again'));
+      $this->Flash->error(__('Неправильные данные, попробуйте снова.'));
     }
   }
 
   public function logout()
    {
-       $this->Flash->success(__('You logged off'));
+       $this->Flash->success(__('Вы вышли из аккаунта'));
        return $this->redirect($this->Auth->logout());
    }
 }

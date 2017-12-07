@@ -22,8 +22,8 @@
           </div>
           <div class="col-sm-4 top-loggedin">
             <ul>
-              <li><a href="/admin/main">В админ панель</a></li>
-              <li><a href="/admin/admin/logout">Выйти из аккаунта</a></li>
+              <li style="border-right: 1px solid #999; padding-right: 5px;"><a href="/admin/main">В админ панель</a></li>
+              <li style="padding-left: 5px;"><a href="/admin/admin/logout">Выйти из аккаунта</a></li>
             </ul>
           </div>
         <?php else :   ?>

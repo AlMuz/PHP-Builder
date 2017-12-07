@@ -39,6 +39,8 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
+            <li><a href="/admin/main/index">На главную страницу админ панели</a></li>
+            <li><a href="/admin/Contacts/index">Форма контактирования</a></li>
             <li><a href="/admin/admin/logout">Выйти из аккаунта</a></li>
           </ul>
         </div>

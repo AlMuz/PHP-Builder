@@ -11,11 +11,18 @@ class ContactsController extends AppController
         parent::beforeFilter($event);
         $this->Auth->allow();
     }
+    
     public function index()
     {
-       if ($this->request->is('post')) {
-         debug($this->request->data);
-       }
+      $contact = $this->Contacts->newEntity();
+      if ($this->request->is('post')) {
+          $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
+          if ($this->Contacts->save($contact)) {
+              $this->Flash->success(__('Форма отправлена, мы свяжемся с вами.'));
+              return $this->redirect(['controller'=>'Pages','action' => 'index']);
+          }
+          $this->Flash->error(__('Что то не так, попробуйте еще раз!'));
+      }
 
     }
 
