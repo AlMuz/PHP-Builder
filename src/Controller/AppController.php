@@ -67,4 +67,11 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
+
+    public function json($data)
+    {
+        $this->response->type('json');
+        $this->response->body(json_encode($data));
+        return $this->response;
+    }    
 }

@@ -23,6 +23,7 @@
   <?= $this->Html->css('fractionslider.css') ?>
   <?= $this->Html->css('animate.css') ?>
   <?= $this->Html->css('style-fraction.css') ?>
+  <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

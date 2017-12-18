@@ -16,6 +16,10 @@ class PhotosTable extends Table
         $this->setTable('photos');
         $this->setDisplayField('idPhoto');
         $this->setPrimaryKey('idPhoto');
+        $this->belongsTo('categories',[
+         'foreignKey' => 'idCategory',
+         'joinType' => 'INNER'
+       ]);
     }
 
     public function validationDefault(Validator $validator)

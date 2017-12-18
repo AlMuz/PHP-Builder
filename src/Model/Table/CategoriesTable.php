@@ -16,6 +16,8 @@ class CategoriesTable extends Table
         $this->setTable('categories');
         $this->setDisplayField('idCategory');
         $this->setPrimaryKey('idCategory');
+        $this->hasMany('Photos');
+
     }
 
     public function validationDefault(Validator $validator)

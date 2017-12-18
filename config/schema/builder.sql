@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 01, 2017 at 05:15 PM
+-- Generation Time: Dec 18, 2017 at 12:24 PM
 -- Server version: 5.7.20-0ubuntu0.16.04.1
 -- PHP Version: 5.6.32-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -34,13 +34,16 @@ CREATE TABLE `categories` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galleries`
+-- Table structure for table `contacts`
 --
 
-CREATE TABLE `galleries` (
-  `idGallery` int(11) NOT NULL,
-  `Name` varchar(100) NOT NULL,
-  `IdCategory` int(11) NOT NULL
+CREATE TABLE `contacts` (
+  `idContact` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Telephone` int(8) DEFAULT NULL,
+  `Text` longtext NOT NULL,
+  `Created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -51,7 +54,7 @@ CREATE TABLE `galleries` (
 
 CREATE TABLE `photos` (
   `idPhoto` int(11) NOT NULL,
-  `idGallery` int(11) NOT NULL,
+  `idCategory` int(11) NOT NULL,
   `Photo` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -86,10 +89,10 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`idCategory`);
 
 --
--- Indexes for table `galleries`
+-- Indexes for table `contacts`
 --
-ALTER TABLE `galleries`
-  ADD PRIMARY KEY (`idGallery`);
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`idContact`);
 
 --
 -- Indexes for table `photos`
@@ -111,17 +114,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `idCategory` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCategory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `galleries`
+-- AUTO_INCREMENT for table `contacts`
 --
-ALTER TABLE `galleries`
-  MODIFY `idGallery` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `contacts`
+  MODIFY `idContact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `idPhoto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPhoto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `users`
 --
